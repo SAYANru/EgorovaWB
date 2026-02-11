@@ -19,7 +19,9 @@
     <!-- ШАПКА (МЕНЮ) - ИСПРАВЛЕНО ДЛЯ ТЕЛЕФОНА -->
     <header class="header">
         <nav class="nav">
-            <a href="/" class="logo">WB Наставник</a>
+            <a href="/" class="logo" onclick="event.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">
+                WB Наставник
+            </a>
             <ul class="nav-menu">
                 <li><a href="#about-course" class="nav-link">О курсе</a></li>
                 <li><a href="#plan" class="nav-link">План обучения</a></li>
@@ -28,7 +30,7 @@
                 <li><a href="#results" class="nav-link">Результаты</a></li>
                 <li><a href="#reviews" class="nav-link">Отзывы</a></li>
                 <li><a href="#contacts-section" class="nav-link">Контакты</a></li>
-                <li><a href="https://forms.yandex.ru/cloud/689f3286068ff00cadba1717/?utm_source=ig&utm_medium=social&utm_content=link_in_bio" class="nav-link highlight" target="_blank">Анкета для предзаписи</a></li>
+                <li><a href="https://forms.yandex.ru/cloud/689f3286068ff00cadba1717/?utm_source=ig&utm_medium=social&utm_content=link_in_bio" class="nav-link highlight" target="_blank">Анкета</a></li>
             </ul>
             <button class="menu-toggle" aria-label="Меню">
                 <i class="fas fa-bars"></i>
