@@ -150,3 +150,32 @@ document.addEventListener('DOMContentLoaded', function() {
     
     console.log('✅ Сайт загружен, всё работает!');
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const logo = document.querySelector('.logo');
+    
+    if (logo) {
+        logo.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Плавная прокрутка наверх
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            
+            // Закрываем меню на мобильных
+            const navMenu = document.querySelector('.nav-menu');
+            const menuToggle = document.querySelector('.menu-toggle');
+            
+            if (window.innerWidth <= 768 && navMenu && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                document.body.style.overflow = '';
+                if (menuToggle) {
+                    menuToggle.querySelector('i').className = 'fas fa-bars';
+                }
+            }
+            
+            return false;
+        });
+    }
+});
