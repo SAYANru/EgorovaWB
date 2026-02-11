@@ -179,3 +179,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const footerHomeLink = document.querySelector('.footer-links a[href="#"]');
+    
+    if (footerHomeLink) {
+        footerHomeLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            return false;
+        });
+    }
+});
