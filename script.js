@@ -1,14 +1,13 @@
 // ЖДЕМ ПОЛНОЙ ЗАГРУЗКИ СТРАНИЦЫ
 document.addEventListener('DOMContentLoaded', function() {
     
-    // ===== 1. МОБИЛЬНОЕ МЕНЮ - 100% РАБОЧЕЕ =====
+    // ===== 1. МОБИЛЬНОЕ МЕНЮ =====
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
     
     if (menuToggle && navMenu) {
         console.log('Меню найдено, инициализация...');
         
-        // Открытие/закрытие по клику на бургер
         menuToggle.addEventListener('click', function(e) {
             e.stopPropagation();
             e.preventDefault();
@@ -24,14 +23,11 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        // Закрытие при клике на ссылку
         const navLinks = document.querySelectorAll('.nav-link');
         navLinks.forEach(link => {
             link.addEventListener('click', function(e) {
-                // Проверяем, это внешняя ссылка или якорь
                 const href = this.getAttribute('href');
                 if (href && (href.startsWith('http') || href.startsWith('#'))) {
-                    // Закрываем меню
                     navMenu.classList.remove('active');
                     document.body.style.overflow = '';
                     if (menuToggle) {
@@ -41,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
         
-        // Закрытие при клике вне меню
         document.addEventListener('click', function(e) {
             if (window.innerWidth <= 768) {
                 if (!navMenu.contains(e.target) && 
@@ -54,7 +49,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        // Закрытие при ресайзе на десктоп
         window.addEventListener('resize', function() {
             if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
                 navMenu.classList.remove('active');
@@ -74,19 +68,15 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (images.length === 0 || buttons.length === 0) return;
             
-            // Показываем первое фото
             images.forEach(img => img.classList.remove('active'));
             buttons.forEach(btn => btn.classList.remove('active'));
             if (images[0]) images[0].classList.add('active');
             if (buttons[0]) buttons[0].classList.add('active');
             
-            // Навешиваем события на кнопки
             buttons.forEach((button, index) => {
-                // Удаляем старые обработчики
                 button.replaceWith(button.cloneNode(true));
             });
             
-            // Получаем свежие кнопки
             const freshButtons = gallery.querySelectorAll('.gallery-btn');
             
             freshButtons.forEach((button, index) => {
@@ -120,7 +110,6 @@ document.addEventListener('DOMContentLoaded', function() {
             if (target) {
                 e.preventDefault();
                 
-                // Закрываем меню на мобильных
                 if (window.innerWidth <= 768 && navMenu) {
                     navMenu.classList.remove('active');
                     document.body.style.overflow = '';
@@ -148,48 +137,15 @@ document.addEventListener('DOMContentLoaded', function() {
         if (e.ctrlKey && e.shiftKey && e.key === 'I') e.preventDefault();
     });
     
-    console.log('✅ Сайт загружен, всё работает!');
-});
-document.addEventListener('DOMContentLoaded', function() {
-    const logo = document.querySelector('.logo');
-    
-    if (logo) {
-        logo.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Плавная прокрутка наверх
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-            
-            // Закрываем меню на мобильных
-            const navMenu = document.querySelector('.nav-menu');
-            const menuToggle = document.querySelector('.menu-toggle');
-            
-            if (window.innerWidth <= 768 && navMenu && navMenu.classList.contains('active')) {
-                navMenu.classList.remove('active');
-                document.body.style.overflow = '';
-                if (menuToggle) {
-                    menuToggle.querySelector('i').className = 'fas fa-bars';
-                }
-            }
-            
-            return false;
-        });
-    }
-});
-document.addEventListener('DOMContentLoaded', function() {
+    // ===== 5. КНОПКА "ГЛАВНАЯ" В ФУТЕРЕ =====
     const footerHomeLink = document.querySelector('.footer-links a[href="#"]');
-    
     if (footerHomeLink) {
         footerHomeLink.addEventListener('click', function(e) {
             e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
             return false;
         });
     }
+    
+    console.log('✅ Сайт загружен, всё работает!');
 });
