@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>Наставничество Wildberries | Егорова Анастасия</title>
+    
+    <!-- ИКОНКА В АДРЕСНОЙ СТРОКЕ -->
+    <link rel="icon" type="logo/jpg" href="logo.jpg">
+    <link rel="shortcut icon" type="logo/jpg" href="logo.jpg">
+    
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -16,27 +21,28 @@
 </head>
 <body>
 
-<!-- ШАПКА (МЕНЮ) - БЕЗ ЛОГОТИПА, ТОЛЬКО ТЕКСТ -->
-<header class="header">
-    <nav class="nav">
-        <a href="#" class="logo" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">
-            WB Наставник
-        </a>
-        <ul class="nav-menu">
-            <li><a href="#about-course" class="nav-link">О курсе</a></li>
-            <li><a href="#plan" class="nav-link">План обучения</a></li>
-            <li><a href="#about" class="nav-link">Обо мне</a></li>
-            <li><a href="#price" class="nav-link">Стоимость</a></li>
-            <li><a href="#results" class="nav-link">Результаты</a></li>
-            <li><a href="#reviews" class="nav-link">Отзывы</a></li>
-            <li><a href="#contacts-section" class="nav-link">Контакты</a></li>
-            <li><a href="https://forms.yandex.ru/cloud/689f3286068ff00cadba1717/?utm_source=ig&utm_medium=social&utm_content=link_in_bio" class="nav-link highlight" target="_blank">Анкета</a></li>
-        </ul>
-        <button class="menu-toggle" aria-label="Меню">
-            <i class="fas fa-bars"></i>
-        </button>
-    </nav>
-</header>
+    <!-- ШАПКА (МЕНЮ) - ТЕКСТОВЫЙ ЛОГОТИП -->
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="logo" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">
+                WB Наставник
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#about-course" class="nav-link">О курсе</a></li>
+                <li><a href="#plan" class="nav-link">План обучения</a></li>
+                <li><a href="#about" class="nav-link">Обо мне</a></li>
+                <li><a href="#price" class="nav-link">Стоимость</a></li>
+                <li><a href="#results" class="nav-link">Результаты</a></li>
+                <li><a href="#reviews" class="nav-link">Отзывы</a></li>
+                <li><a href="#contacts-section" class="nav-link">Контакты</a></li>
+                <li><a href="https://forms.yandex.ru/cloud/689f3286068ff00cadba1717/?utm_source=ig&utm_medium=social&utm_content=link_in_bio" class="nav-link highlight" target="_blank">Анкета предзаписи</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Меню">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
     <main class="main-content">
 
         <!-- ===== БЛОК 1. ГЛАВНЫЙ ЭКРАН (HERO) ===== -->
@@ -49,9 +55,9 @@
                     <i class="fas fa-pencil-alt" style="margin-right: 8px;"></i>
                     Оставить заявку
                 </a>
+                <span style="color: white; font-size: 1rem; text-shadow: 0 2px 5px rgba(0,0,0,0.5);">на консультацию</span>
             </div>
             
-            <!-- Стили для адаптации кнопки на телефоне -->
             <style>
                 @media (max-width: 768px) {
                     .hero-section div {
@@ -67,7 +73,6 @@
                         font-size: 0.8rem !important;
                     }
                 }
-                
                 @media (max-width: 480px) {
                     .hero-section div {
                         top: 10% !important;
@@ -81,28 +86,23 @@
                         font-size: 0.75rem !important;
                     }
                     .hero-section div span {
+                        font-size: 0.7rem !important;
+                        margin-left: 5px;
+                    }
+                }
+                @media (max-width: 360px) {
+                    .hero-section div {
+                        top: 8% !important;
+                        left: 4% !important;
+                    }
+                    .hero-section div a {
+                        padding: 5px 10px !important;
+                        font-size: 0.7rem !important;
+                    }
+                }
+            </style>
+        </section>
 
-<!-- ШАПКА (МЕНЮ) - С ЛОГОТИПОМ -->
-<header class="header">
-    <nav class="nav">
-        <a href="#" class="logo" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">
-            <img src="images/logo.png" alt="WB Наставник" class="logo-img">
-        </a>
-        <ul class="nav-menu">
-            <li><a href="#about-course" class="nav-link">О курсе</a></li>
-            <li><a href="#plan" class="nav-link">План обучения</a></li>
-            <li><a href="#about" class="nav-link">Обо мне</a></li>
-            <li><a href="#price" class="nav-link">Стоимость</a></li>
-            <li><a href="#results" class="nav-link">Результаты</a></li>
-            <li><a href="#reviews" class="nav-link">Отзывы</a></li>
-            <li><a href="#contacts-section" class="nav-link">Контакты</a></li>
-            <li><a href="https://forms.yandex.ru/cloud/689f3286068ff00cadba1717/?utm_source=ig&utm_medium=social&utm_content=link_in_bio" class="nav-link highlight" target="_blank">Анкета</a></li>
-        </ul>
-        <button class="menu-toggle" aria-label="Меню">
-            <i class="fas fa-bars"></i>
-        </button>
-    </nav>
-</header>
         <!-- ===== БЛОК 2. ЧТО ТЫ ПОЛУЧИШЬ ===== -->
         <section id="about-course" class="slide-section" style="margin: 0; padding: 0;">
             <img src="images/slide14.png" alt="Что ты получишь на наставничестве" style="width: 100%; height: auto; display: block;">
@@ -122,9 +122,9 @@
                 </div>
             </div>
             <div class="gallery-buttons">
-                <button class="gallery-btn active" data-index="0">1</button>
-                <button class="gallery-btn" data-index="1">2</button>
-                <button class="gallery-btn" data-index="2">3</button>
+                <button class="gallery-btn active">1</button>
+                <button class="gallery-btn">2</button>
+                <button class="gallery-btn">3</button>
             </div>
         </section>
 
@@ -142,13 +142,13 @@
                 </div>
             </div>
             <div class="gallery-buttons">
-                <button class="gallery-btn active" data-index="0">1</button>
-                <button class="gallery-btn" data-index="1">2</button>
-                <button class="gallery-btn" data-index="2">3</button>
+                <button class="gallery-btn active">1</button>
+                <button class="gallery-btn">2</button>
+                <button class="gallery-btn">3</button>
             </div>
         </section>
 
-                <!-- ===== БЛОК 5. СТОИМОСТЬ (ТАРИФЫ) - БЕЗ КНОПОК ===== -->
+        <!-- ===== БЛОК 5. СТОИМОСТЬ (ТАРИФЫ) - БЕЗ КНОПОК ===== -->
         <section id="price" style="width: 100%; margin: 0; padding: 0;">
             <img src="images/slide17.png" alt="Тарифы и стоимость обучения" style="width: 100%; height: auto; display: block;">
             
@@ -286,9 +286,9 @@
                         </div>
                     </div>
                     <div class="gallery-buttons">
-                        <button class="gallery-btn active" data-index="0">1</button>
-                        <button class="gallery-btn" data-index="1">2</button>
-                        <button class="gallery-btn" data-index="2">3</button>
+                        <button class="gallery-btn active">1</button>
+                        <button class="gallery-btn">2</button>
+                        <button class="gallery-btn">3</button>
                     </div>
                 </div>
             </div>
@@ -307,8 +307,8 @@
                         </div>
                     </div>
                     <div class="gallery-buttons">
-                        <button class="gallery-btn active" data-index="0">1</button>
-                        <button class="gallery-btn" data-index="1">2</button>
+                        <button class="gallery-btn active">1</button>
+                        <button class="gallery-btn">2</button>
                     </div>
                 </div>
             </div>
@@ -320,9 +320,7 @@
             
             <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 2;">
                 <div style="text-align: center; margin-bottom: 50px;">
-                    <h2 style="font-size: 2.5rem; color: white; margin-bottom: 15px; text-shadow: 0 2px 10px rgba(0,0,0,0.1);">Свяжитесь со мной</h2>
-                    <p style="font-size: 1.2rem; color: rgba(255,255,255,0.9);">Отвечаю на вопросы в течение 15 минут в рабочее время</p>
-                </div>
+                    <h2 style="font-size: 2.5rem; color: white; margin-bottom: 15px; text-shadow: 0 2px 10px rgba(0,0,0,0.1);">Свяжитесь со мной</h2>                </div>
                 
                 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-bottom: 40px;">
                     <div style="flex: 1 1 300px; background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); border: 2px solid rgba(255,255,255,0.3); border-radius: 20px; padding: 30px; text-align: center;">
@@ -335,8 +333,7 @@
                     <div style="flex: 1 1 300px; background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); border: 2px solid rgba(255,255,255,0.3); border-radius: 20px; padding: 30px; text-align: center;">
                         <i class="fab fa-telegram" style="font-size: 2.5rem; color: white; margin-bottom: 20px;"></i>
                         <h3 style="font-size: 1.5rem; color: white; margin-bottom: 20px;">Telegram</h3>
-                        <div style="font-size: 1.5rem; font-weight: bold; color: white; margin-bottom: 10px;">@NastMiR2517</div>
-                    </div>
+                        <div style="font-size: 1.5rem; font-weight: bold; color: white; margin-bottom: 10px;">@NastMiR2517</div>                    </div>
                     
                     <div style="flex: 1 1 300px; background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); border: 2px solid rgba(255,255,255,0.3); border-radius: 20px; padding: 30px; text-align: center;">
                         <i class="fab fa-vk" style="font-size: 2.5rem; color: white; margin-bottom: 20px;"></i>
@@ -355,14 +352,19 @@
                         Написать во ВКонтакте
                     </a>
                 </div>
-            
+                
+                <p style="text-align: center; color: rgba(255,255,255,0.9); margin-top: 40px; font-size: 0.95rem;">
+                    <i class="fas fa-heart" style="color: white;"></i>
+                    Всегда на связи и готова помочь с любыми вопросами
+                    <i class="fas fa-heart" style="color: white; margin-left: 5px;"></i>
+                </p>
             </div>
         </section>
 
         <!-- ===== БЛОК 8. ФОРМА ЗАЯВКИ ===== -->
         <section style="background: linear-gradient(135deg, #967AA1 0%, #B59BBE 100%); padding: 60px 20px; text-align: center; color: white; border-top: 3px solid #D6C4DD; border-bottom: 3px solid #D6C4DD;">
             <div style="max-width: 600px; margin: 0 auto;">
-                <h2 style="font-size: 2.2rem; margin-bottom: 20px; text-shadow: 0 2px 5px rgba(0,0,0,0.1);">Запишись на консультацию</h2>
+                <h2 style="font-size: 2.2rem; margin-bottom: 20px; text-shadow: 0 2px 5px rgba(0,0,0,0.1);">Оформи предзапись</h2>
                 <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.95;">Разберем твою ситуацию и дадим план старта</p>
                 <a href="https://forms.yandex.ru/cloud/689f3286068ff00cadba1717/?utm_source=ig&utm_medium=social&utm_content=link_in_bio" target="_blank" style="display: inline-block; background: #967AA1; color: white; padding: 18px 50px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2); border: 2px solid #D6C4DD;">
                     <i class="fas fa-pencil-alt" style="margin-right: 10px;"></i>
@@ -374,13 +376,17 @@
 
     </main>
 
+    <!-- ФИКСИРОВАННАЯ КНОПКА ЗАЯВКИ -->
+    <a href="https://forms.yandex.ru/cloud/689f3286068ff00cadba1717/?utm_source=ig&utm_medium=social&utm_content=link_in_bio" 
+       class="floating-btn" target="_blank">
+        <i class="fas fa-pencil-alt"></i>
+        <span>Оставить заявку</span>
+    </a>
 
-    <!-- ФУТЕР - ИСПРАВЛЕНО -->
+    <!-- ФУТЕР - 2026 ГОД, ЕГОРОВА АНАСТАСИЯ -->
     <footer class="site-footer">
         <div class="footer-content">
-            <div class="footer-logo">
-    <img src="images/logo.jpg" alt="WB Наставник" style="height: 40px; width: auto;">
-            </div>
+            <div class="footer-logo">WB Наставник</div>
             <p class="footer-text">Профессиональное наставничество по запуску и масштабированию бизнеса на Wildberries</p>
             <div class="footer-links">
                 <a href="#" class="footer-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">Главная</a>
@@ -405,43 +411,6 @@
         @keyframes rotate {
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
-        }
-        
-        @media (max-width: 768px) {
-            .hero-section div {
-                bottom: 18% !important;
-                left: 5% !important;
-                gap: 10px !important;
-            }
-            .hero-section div a {
-                padding: 8px 16px !important;
-                font-size: 0.85rem !important;
-            }
-            .hero-section div span {
-                font-size: 0.8rem !important;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .hero-section div {
-                bottom: 15% !important;
-                left: 5% !important;
-                gap: 8px !important;
-            }
-            .hero-section div a {
-                padding: 6px 12px !important;
-                font-size: 0.75rem !important;
-            }
-            .hero-section div span {
-                font-size: 0.7rem !important;
-                white-space: nowrap;
-            }
-        }
-        
-        @media (max-width: 360px) {
-            .hero-section div {
-                bottom: 12% !important;
-            }
         }
     </style>
 </body>
