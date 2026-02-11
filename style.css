@@ -415,3 +415,63 @@ img {
         font-size: 1.4rem;
     }
 }
+/* ===== ЛОГОТИП ===== */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    height: 50px;
+}
+
+.logo-img {
+    height: 45px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+    display: block;
+    transition: opacity 0.3s;
+}
+
+.logo-img:hover {
+    opacity: 0.9;
+}
+
+.logo-icon {
+    font-size: 1.8rem;
+    color: var(--lavender-dark);
+}
+
+.logo-text {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--lavender-dark);
+    letter-spacing: 1px;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .logo-img {
+        height: 35px;
+        max-width: 150px;
+    }
+    
+    .logo-icon {
+        font-size: 1.5rem;
+    }
+    
+    .logo-text {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-img {
+        height: 30px;
+        max-width: 120px;
+    }
+    
+    .logo-text {
+        font-size: 1rem;
+    }
+}
