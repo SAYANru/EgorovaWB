@@ -28,7 +28,7 @@ html, body {
     --gold: #D4AF37;
 }
 
-/* ===== МЕНЮ - ИСПРАВЛЕНО ДЛЯ ТЕЛЕФОНА ===== */
+/* ===== МЕНЮ ===== */
 .header {
     position: fixed;
     top: 0;
@@ -285,12 +285,11 @@ img {
     -khtml-user-drag: none;
     -moz-user-drag: none;
     -o-user-drag: none;
-    -user-drag: none;
+    user-drag: none;
 }
 
 /* ===== АДАПТИВНОСТЬ - ТЕЛЕФОН ===== */
 @media (max-width: 768px) {
-    /* МЕНЮ */
     .nav-menu {
         display: none;
         position: fixed;
@@ -331,7 +330,6 @@ img {
         display: block;
     }
     
-    /* КНОПКИ */
     .floating-btn {
         bottom: 20px;
         right: 20px;
@@ -347,26 +345,6 @@ img {
         font-size: 1.2rem;
     }
     
-    /* КОНТАКТЫ */
-    .contact-info-title h2 {
-        font-size: 2rem;
-    }
-    
-    .contact-info-time {
-        font-size: 1.6rem;
-    }
-    
-    .contact-social {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .contact-social-link {
-        width: 100%;
-        max-width: 350px;
-    }
-    
-    /* ФУТЕР */
     .footer-links {
         flex-direction: column;
         gap: 10px;
@@ -401,77 +379,5 @@ img {
     
     .floating-btn i {
         font-size: 1.2rem;
-    }
-    
-    .contact-info-title h2 {
-        font-size: 1.8rem;
-    }
-    
-    .contact-info-card {
-        padding: 25px;
-    }
-    
-    .contact-info-time {
-        font-size: 1.4rem;
-    }
-}
-/* ===== ЛОГОТИП ===== */
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    height: 50px;
-}
-
-.logo-img {
-    height: 45px;
-    width: auto;
-    max-width: 200px;
-    object-fit: contain;
-    display: block;
-    transition: opacity 0.3s;
-}
-
-.logo-img:hover {
-    opacity: 0.9;
-}
-
-.logo-icon {
-    font-size: 1.8rem;
-    color: var(--lavender-dark);
-}
-
-.logo-text {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--lavender-dark);
-    letter-spacing: 1px;
-}
-
-/* Адаптация для мобильных */
-@media (max-width: 768px) {
-    .logo-img {
-        height: 35px;
-        max-width: 150px;
-    }
-    
-    .logo-icon {
-        font-size: 1.5rem;
-    }
-    
-    .logo-text {
-        font-size: 1.2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo-img {
-        height: 30px;
-        max-width: 120px;
-    }
-    
-    .logo-text {
-        font-size: 1rem;
     }
 }
