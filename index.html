@@ -12,10 +12,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Убираем index.html из адресной строки -->
     <script>
-        if (window.location.pathname.endsWith('index.html')) {
-            window.history.replaceState({}, document.title, window.location.pathname.replace('index.html', ''));
+        if (window.location.hostname === 'sayanru.github.io') {
+            window.location.href = 'https://egorovanawb.ru' + window.location.pathname;
         }
     </script>
 </head>
