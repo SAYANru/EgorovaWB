@@ -129,13 +129,47 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // ===== 4. ЗАЩИТА ОТ КОПИРОВАНИЯ =====
-    document.addEventListener('contextmenu', e => e.preventDefault());
-    document.addEventListener('keydown', e => {
-        if (e.ctrlKey && (e.key === 'u' || e.key === 'U')) e.preventDefault();
-        if (e.key === 'F12') e.preventDefault();
-        if (e.ctrlKey && e.shiftKey && e.key === 'I') e.preventDefault();
-    });
+// ===== ЗАЩИТА ОТ ПРОСМОТРА КОДА =====
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+document.addEventListener('keydown', e => {
+    // F12
+    if (e.key === 'F12') {
+        e.preventDefault();
+        return false;
+    }
+    // Ctrl+U
+    if (e.ctrlKey && e.key.toLowerCase() === 'u') {
+        e.preventDefault();
+        return false;
+    }
+    // Ctrl+Shift+I
+    if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') {
+        e.preventDefault();
+        return false;
+    }
+    // Ctrl+Shift+J
+    if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'j') {
+        e.preventDefault();
+        return false;
+    }
+    // Ctrl+S (сохранение)
+    if (e.ctrlKey && e.key.toLowerCase() === 's') {
+        e.preventDefault();
+        return false;
+    }
+});
+
+// Предупреждение при попытке открыть DevTools
+setInterval(function() {
+    const before = new Date();
+    debugger;
+    const after = new Date();
+    if (after - before > 100) {
+        // Если DevTools открыт - редирект или очистка
+        // document.body.innerHTML = '<h1>Доступ запрещен</h1>';
+    }
+}, 2000);
     
     // ===== 5. КНОПКА "ГЛАВНАЯ" В ФУТЕРЕ =====
     const footerHomeLink = document.querySelector('.footer-links a[href="#"]');
