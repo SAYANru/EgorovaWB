@@ -160,16 +160,6 @@ document.addEventListener('keydown', e => {
     }
 });
 
-// Предупреждение при попытке открыть DevTools
-setInterval(function() {
-    const before = new Date();
-    debugger;
-    const after = new Date();
-    if (after - before > 100) {
-        // Если DevTools открыт - редирект или очистка
-        // document.body.innerHTML = '<h1>Доступ запрещен</h1>';
-    }
-}, 2000);
     
     // ===== 5. КНОПКА "ГЛАВНАЯ" В ФУТЕРЕ =====
     const footerHomeLink = document.querySelector('.footer-links a[href="#"]');
@@ -181,5 +171,4 @@ setInterval(function() {
         });
     }
     
-    console.log('✅ Сайт загружен, всё работает!');
 });
