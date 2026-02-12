@@ -287,6 +287,11 @@ img {
     -o-user-drag: none;
     user-drag: none;
 }
+img {
+    aspect-ratio: attr(width) / attr(height);
+    width: 100%;
+    height: auto;
+}
 
 /* ===== АДАПТИВНОСТЬ - ТЕЛЕФОН ===== */
 @media (max-width: 768px) {
