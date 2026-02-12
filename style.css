@@ -386,15 +386,3 @@ img {
         font-size: 1.2rem;
     }
 }
-/* ===== ИСПРАВЛЕНИЕ ПРЫЖКОВ ===== */
-img {
-    aspect-ratio: attr(width) / attr(height);
-    width: 100%;
-    height: auto;
-}
-
-/* Заглушка пока грузится фото */
-.slide-section, .gallery-image {
-    background: #F9F2F9;
-    min-height: 200px;
-}
